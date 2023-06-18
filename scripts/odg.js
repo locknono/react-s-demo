@@ -9,7 +9,4 @@ const res = esprima.parseModule(
   { jsx: false }
 );
 
-console.log("res: ", res);
-
-console.log("----------");
-console.log(res.body[2].expression);
+writeFileSync("./scripts/odg.json", JSON.stringify(res, null, 2));
