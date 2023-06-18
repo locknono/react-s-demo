@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useContext, createContext } from "react";
 import Panel from "@/components/panal";
 import { MODE } from "@/constant";
+import { ThemeContext } from "@/constant/context";
 
 /**
  * @description data rendered as html; Should be sanitized
@@ -35,10 +36,11 @@ export default function Demo() {
   };
 
   return (
-    <div>
-      <div>graph-demo</div>
-      <button onClick={handleSwitchMode}>change Data</button>
-      <Panel {...data} />
-    </div>
+    <ThemeContext.Provider value="dark">
+      <div>
+        <button onClick={handleSwitchMode}>change Data</button>
+        <Panel {...data} />
+      </div>
+    </ThemeContext.Provider>
   );
 }

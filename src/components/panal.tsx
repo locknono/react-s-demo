@@ -1,6 +1,7 @@
 import { MODE } from "@/constant";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import purify from "dompurify";
+import { ThemeContext } from "@/constant/context";
 
 interface IPanelProps {
   mode: number;
@@ -11,6 +12,7 @@ interface IPanelProps {
  * @description render the content with respect to the rendering mode
  */
 export default function Panel(props: IPanelProps) {
+  const theme = useContext(ThemeContext);
   /**
    * @description process the content. If the rendering mode is `html`, the content should be sanitized.
    */
@@ -30,15 +32,18 @@ export default function Panel(props: IPanelProps) {
     setHtml(processedContent);
   }, [props.mode, props.content]);
 
-  if (props.mode === MODE.TEXT) {
-    return <div>{html}</div>;
-  } else {
-    return (
-      <div
-        dangerouslySetInnerHTML={{
-          __html: html,
-        }}
-      />
-    );
-  }
+  return (
+    <div>
+      <div>theme: {theme}</div>
+      {props.mode === MODE.TEXT ? (
+        <div>{html}</div>
+      ) : (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: html,
+          }}
+        />
+      )}
+    </div>
+  );
 }
