@@ -68,7 +68,6 @@ function Panel(props: IPanelProps) {
       return content;
     } else {
       const sanitizedHtml = purify.sanitize(props.content);
-
       return sanitizedHtml;
     }
   };
