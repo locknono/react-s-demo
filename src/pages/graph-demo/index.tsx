@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useContext, createContext } from "react";
-import Panel from "@/components/panal";
+import Panel from "@/components/panel";
 import { MODE } from "@/constant";
 import { ThemeContext } from "@/constant/context";
 
