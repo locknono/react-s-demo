@@ -117,27 +117,6 @@
       }
     },
     {
-      "type": "ImportDeclaration",
-      "specifiers": [
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
-            "name": "sanitizeFieldRestProps"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "sanitizeFieldRestProps"
-          }
-        }
-      ],
-      "source": {
-        "type": "Literal",
-        "value": "./sanitizeFieldRestProps",
-        "raw": "\"./sanitizeFieldRestProps\""
-      }
-    },
-    {
       "type": "ExportNamedDeclaration",
       "declaration": {
         "type": "VariableDeclaration",
@@ -396,369 +375,6 @@
             "type": "VariableDeclarator",
             "id": {
               "type": "Identifier",
-              "name": "RichTextField"
-            },
-            "init": {
-              "type": "BinaryExpression",
-              "operator": ">",
-              "left": {
-                "type": "BinaryExpression",
-                "operator": "<",
-                "left": {
-                  "type": "Identifier",
-                  "name": "memo"
-                },
-                "right": {
-                  "type": "Identifier",
-                  "name": "RichTextFieldProps"
-                }
-              },
-              "right": {
-                "type": "ArrowFunctionExpression",
-                "id": null,
-                "params": [
-                  {
-                    "type": "Identifier",
-                    "name": "props"
-                  }
-                ],
-                "body": {
-                  "type": "BlockStatement",
-                  "body": [
-                    {
-                      "type": "VariableDeclaration",
-                      "declarations": [
-                        {
-                          "type": "VariableDeclarator",
-                          "id": {
-                            "type": "ObjectPattern",
-                            "properties": [
-                              {
-                                "type": "Property",
-                                "key": {
-                                  "type": "Identifier",
-                                  "name": "className"
-                                },
-                                "computed": false,
-                                "value": {
-                                  "type": "Identifier",
-                                  "name": "className"
-                                },
-                                "kind": "init",
-                                "method": false,
-                                "shorthand": true
-                              },
-                              {
-                                "type": "Property",
-                                "key": {
-                                  "type": "Identifier",
-                                  "name": "emptyText"
-                                },
-                                "computed": false,
-                                "value": {
-                                  "type": "Identifier",
-                                  "name": "emptyText"
-                                },
-                                "kind": "init",
-                                "method": false,
-                                "shorthand": true
-                              },
-                              {
-                                "type": "Property",
-                                "key": {
-                                  "type": "Identifier",
-                                  "name": "source"
-                                },
-                                "computed": false,
-                                "value": {
-                                  "type": "Identifier",
-                                  "name": "source"
-                                },
-                                "kind": "init",
-                                "method": false,
-                                "shorthand": true
-                              },
-                              {
-                                "type": "Property",
-                                "key": {
-                                  "type": "Identifier",
-                                  "name": "stripTags"
-                                },
-                                "computed": false,
-                                "value": {
-                                  "type": "AssignmentPattern",
-                                  "left": {
-                                    "type": "Identifier",
-                                    "name": "stripTags"
-                                  },
-                                  "right": {
-                                    "type": "Literal",
-                                    "value": false,
-                                    "raw": "false"
-                                  }
-                                },
-                                "kind": "init",
-                                "method": false,
-                                "shorthand": true
-                              }
-                            ]
-                          },
-                          "init": {
-                            "type": "Identifier",
-                            "name": "props"
-                          }
-                        }
-                      ],
-                      "kind": "const"
-                    },
-                    {
-                      "type": "VariableDeclaration",
-                      "declarations": [
-                        {
-                          "type": "VariableDeclarator",
-                          "id": {
-                            "type": "Identifier",
-                            "name": "record"
-                          },
-                          "init": {
-                            "type": "CallExpression",
-                            "callee": {
-                              "type": "Identifier",
-                              "name": "useRecordContext"
-                            },
-                            "arguments": [
-                              {
-                                "type": "Identifier",
-                                "name": "props"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "kind": "const"
-                    },
-                    {
-                      "type": "VariableDeclaration",
-                      "declarations": [
-                        {
-                          "type": "VariableDeclarator",
-                          "id": {
-                            "type": "Identifier",
-                            "name": "value"
-                          },
-                          "init": {
-                            "type": "CallExpression",
-                            "callee": {
-                              "type": "Identifier",
-                              "name": "get"
-                            },
-                            "arguments": [
-                              {
-                                "type": "Identifier",
-                                "name": "record"
-                              },
-                              {
-                                "type": "Identifier",
-                                "name": "source"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "kind": "const"
-                    },
-                    {
-                      "type": "ReturnStatement",
-                      "argument": {
-                        "type": "JSXElement",
-                        "openingElement": {
-                          "type": "JSXOpeningElement",
-                          "name": {
-                            "type": "JSXIdentifier",
-                            "name": "Typography"
-                          },
-                          "selfClosing": false,
-                          "attributes": [
-                            {
-                              "type": "JSXAttribute",
-                              "name": {
-                                "type": "JSXIdentifier",
-                                "name": "className"
-                              },
-                              "value": {
-                                "type": "JSXExpressionContainer",
-                                "expression": {
-                                  "type": "Identifier",
-                                  "name": "className"
-                                }
-                              }
-                            },
-                            {
-                              "type": "JSXAttribute",
-                              "name": {
-                                "type": "JSXIdentifier",
-                                "name": "variant"
-                              },
-                              "value": {
-                                "type": "Literal",
-                                "value": "body2",
-                                "raw": "\"body2\""
-                              }
-                            },
-                            {
-                              "type": "JSXAttribute",
-                              "name": {
-                                "type": "JSXIdentifier",
-                                "name": "component"
-                              },
-                              "value": {
-                                "type": "Literal",
-                                "value": "span",
-                                "raw": "\"span\""
-                              }
-                            }
-                          ]
-                        },
-                        "children": [
-                          {
-                            "type": "JSXText",
-                            "value": "\n        ",
-                            "raw": "\n        "
-                          },
-                          {
-                            "type": "JSXExpressionContainer",
-                            "expression": {
-                              "type": "ConditionalExpression",
-                              "test": {
-                                "type": "LogicalExpression",
-                                "operator": "&&",
-                                "left": {
-                                  "type": "BinaryExpression",
-                                  "operator": "==",
-                                  "left": {
-                                    "type": "Identifier",
-                                    "name": "value"
-                                  },
-                                  "right": {
-                                    "type": "Literal",
-                                    "value": null,
-                                    "raw": "null"
-                                  }
-                                },
-                                "right": {
-                                  "type": "Identifier",
-                                  "name": "emptyText"
-                                }
-                              },
-                              "consequent": {
-                                "type": "Identifier",
-                                "name": "emptyText"
-                              },
-                              "alternate": {
-                                "type": "ConditionalExpression",
-                                "test": {
-                                  "type": "Identifier",
-                                  "name": "stripTags"
-                                },
-                                "consequent": {
-                                  "type": "CallExpression",
-                                  "callee": {
-                                    "type": "Identifier",
-                                    "name": "removeTags"
-                                  },
-                                  "arguments": [
-                                    {
-                                      "type": "Identifier",
-                                      "name": "value"
-                                    }
-                                  ]
-                                },
-                                "alternate": {
-                                  "type": "JSXElement",
-                                  "openingElement": {
-                                    "type": "JSXOpeningElement",
-                                    "name": {
-                                      "type": "JSXIdentifier",
-                                      "name": "span"
-                                    },
-                                    "selfClosing": true,
-                                    "attributes": [
-                                      {
-                                        "type": "JSXAttribute",
-                                        "name": {
-                                          "type": "JSXIdentifier",
-                                          "name": "dangerouslySetInnerHTML"
-                                        },
-                                        "value": {
-                                          "type": "JSXExpressionContainer",
-                                          "expression": {
-                                            "type": "ObjectExpression",
-                                            "properties": [
-                                              {
-                                                "type": "Property",
-                                                "key": {
-                                                  "type": "Identifier",
-                                                  "name": "__html"
-                                                },
-                                                "computed": false,
-                                                "value": {
-                                                  "type": "Identifier",
-                                                  "name": "value"
-                                                },
-                                                "kind": "init",
-                                                "method": false,
-                                                "shorthand": false
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  "children": [],
-                                  "closingElement": null
-                                }
-                              }
-                            }
-                          },
-                          {
-                            "type": "JSXText",
-                            "value": "\n      ",
-                            "raw": "\n      "
-                          }
-                        ],
-                        "closingElement": {
-                          "type": "JSXClosingElement",
-                          "name": {
-                            "type": "JSXIdentifier",
-                            "name": "Typography"
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                "generator": false,
-                "expression": false,
-                "async": false
-              }
-            }
-          }
-        ],
-        "kind": "const"
-      },
-      "specifiers": [],
-      "source": null
-    },
-    {
-      "type": "ExportNamedDeclaration",
-      "declaration": {
-        "type": "VariableDeclaration",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
               "name": "removeTags"
             },
             "init": {
@@ -816,6 +432,362 @@
               "generator": false,
               "expression": true,
               "async": false
+            }
+          }
+        ],
+        "kind": "const"
+      },
+      "specifiers": [],
+      "source": null
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "RichTextField"
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "memo"
+              },
+              "arguments": [
+                {
+                  "type": "ArrowFunctionExpression",
+                  "id": null,
+                  "params": [
+                    {
+                      "type": "Identifier",
+                      "name": "props"
+                    }
+                  ],
+                  "body": {
+                    "type": "BlockStatement",
+                    "body": [
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "ObjectPattern",
+                              "properties": [
+                                {
+                                  "type": "Property",
+                                  "key": {
+                                    "type": "Identifier",
+                                    "name": "className"
+                                  },
+                                  "computed": false,
+                                  "value": {
+                                    "type": "Identifier",
+                                    "name": "className"
+                                  },
+                                  "kind": "init",
+                                  "method": false,
+                                  "shorthand": true
+                                },
+                                {
+                                  "type": "Property",
+                                  "key": {
+                                    "type": "Identifier",
+                                    "name": "emptyText"
+                                  },
+                                  "computed": false,
+                                  "value": {
+                                    "type": "Identifier",
+                                    "name": "emptyText"
+                                  },
+                                  "kind": "init",
+                                  "method": false,
+                                  "shorthand": true
+                                },
+                                {
+                                  "type": "Property",
+                                  "key": {
+                                    "type": "Identifier",
+                                    "name": "source"
+                                  },
+                                  "computed": false,
+                                  "value": {
+                                    "type": "Identifier",
+                                    "name": "source"
+                                  },
+                                  "kind": "init",
+                                  "method": false,
+                                  "shorthand": true
+                                },
+                                {
+                                  "type": "Property",
+                                  "key": {
+                                    "type": "Identifier",
+                                    "name": "stripTags"
+                                  },
+                                  "computed": false,
+                                  "value": {
+                                    "type": "AssignmentPattern",
+                                    "left": {
+                                      "type": "Identifier",
+                                      "name": "stripTags"
+                                    },
+                                    "right": {
+                                      "type": "Literal",
+                                      "value": false,
+                                      "raw": "false"
+                                    }
+                                  },
+                                  "kind": "init",
+                                  "method": false,
+                                  "shorthand": true
+                                }
+                              ]
+                            },
+                            "init": {
+                              "type": "Identifier",
+                              "name": "props"
+                            }
+                          }
+                        ],
+                        "kind": "const"
+                      },
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "Identifier",
+                              "name": "record"
+                            },
+                            "init": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "Identifier",
+                                "name": "useRecordContext"
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "props"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "kind": "const"
+                      },
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "Identifier",
+                              "name": "value"
+                            },
+                            "init": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "Identifier",
+                                "name": "get"
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "record"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "name": "source"
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "kind": "const"
+                      },
+                      {
+                        "type": "ReturnStatement",
+                        "argument": {
+                          "type": "JSXElement",
+                          "openingElement": {
+                            "type": "JSXOpeningElement",
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "name": "Typography"
+                            },
+                            "selfClosing": false,
+                            "attributes": [
+                              {
+                                "type": "JSXAttribute",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "className"
+                                },
+                                "value": {
+                                  "type": "JSXExpressionContainer",
+                                  "expression": {
+                                    "type": "Identifier",
+                                    "name": "className"
+                                  }
+                                }
+                              },
+                              {
+                                "type": "JSXAttribute",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "variant"
+                                },
+                                "value": {
+                                  "type": "Literal",
+                                  "value": "body2",
+                                  "raw": "\"body2\""
+                                }
+                              },
+                              {
+                                "type": "JSXAttribute",
+                                "name": {
+                                  "type": "JSXIdentifier",
+                                  "name": "component"
+                                },
+                                "value": {
+                                  "type": "Literal",
+                                  "value": "span",
+                                  "raw": "\"span\""
+                                }
+                              }
+                            ]
+                          },
+                          "children": [
+                            {
+                              "type": "JSXText",
+                              "value": "\n      ",
+                              "raw": "\n      "
+                            },
+                            {
+                              "type": "JSXExpressionContainer",
+                              "expression": {
+                                "type": "ConditionalExpression",
+                                "test": {
+                                  "type": "LogicalExpression",
+                                  "operator": "&&",
+                                  "left": {
+                                    "type": "BinaryExpression",
+                                    "operator": "==",
+                                    "left": {
+                                      "type": "Identifier",
+                                      "name": "value"
+                                    },
+                                    "right": {
+                                      "type": "Literal",
+                                      "value": null,
+                                      "raw": "null"
+                                    }
+                                  },
+                                  "right": {
+                                    "type": "Identifier",
+                                    "name": "emptyText"
+                                  }
+                                },
+                                "consequent": {
+                                  "type": "Identifier",
+                                  "name": "emptyText"
+                                },
+                                "alternate": {
+                                  "type": "ConditionalExpression",
+                                  "test": {
+                                    "type": "Identifier",
+                                    "name": "stripTags"
+                                  },
+                                  "consequent": {
+                                    "type": "CallExpression",
+                                    "callee": {
+                                      "type": "Identifier",
+                                      "name": "removeTags"
+                                    },
+                                    "arguments": [
+                                      {
+                                        "type": "Identifier",
+                                        "name": "value"
+                                      }
+                                    ]
+                                  },
+                                  "alternate": {
+                                    "type": "JSXElement",
+                                    "openingElement": {
+                                      "type": "JSXOpeningElement",
+                                      "name": {
+                                        "type": "JSXIdentifier",
+                                        "name": "span"
+                                      },
+                                      "selfClosing": true,
+                                      "attributes": [
+                                        {
+                                          "type": "JSXAttribute",
+                                          "name": {
+                                            "type": "JSXIdentifier",
+                                            "name": "dangerouslySetInnerHTML"
+                                          },
+                                          "value": {
+                                            "type": "JSXExpressionContainer",
+                                            "expression": {
+                                              "type": "ObjectExpression",
+                                              "properties": [
+                                                {
+                                                  "type": "Property",
+                                                  "key": {
+                                                    "type": "Identifier",
+                                                    "name": "__html"
+                                                  },
+                                                  "computed": false,
+                                                  "value": {
+                                                    "type": "Identifier",
+                                                    "name": "value"
+                                                  },
+                                                  "kind": "init",
+                                                  "method": false,
+                                                  "shorthand": false
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "children": [],
+                                    "closingElement": null
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "JSXText",
+                              "value": "\n    ",
+                              "raw": "\n    "
+                            }
+                          ],
+                          "closingElement": {
+                            "type": "JSXClosingElement",
+                            "name": {
+                              "type": "JSXIdentifier",
+                              "name": "Typography"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "generator": false,
+                  "expression": false,
+                  "async": false
+                }
+              ]
             }
           }
         ],
