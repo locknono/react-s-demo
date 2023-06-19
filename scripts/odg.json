@@ -1,0 +1,146 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "id": {
+        "type": "Identifier",
+        "name": "Func"
+      },
+      "params": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": []
+      },
+      "generator": false,
+      "expression": false,
+      "async": false
+    },
+    {
+      "type": "EmptyStatement"
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "computed": false,
+          "object": {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+              "type": "Identifier",
+              "name": "Func"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "prototype"
+            }
+          },
+          "property": {
+            "type": "Identifier",
+            "name": "x"
+          }
+        },
+        "right": {
+          "type": "Literal",
+          "value": "ab",
+          "raw": "\"ab\""
+        }
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "AssignmentExpression",
+        "operator": "=",
+        "left": {
+          "type": "Identifier",
+          "name": "myFunc"
+        },
+        "right": {
+          "type": "NewExpression",
+          "callee": {
+            "type": "Identifier",
+            "name": "Func"
+          },
+          "arguments": []
+        }
+      }
+    },
+    {
+      "type": "IfStatement",
+      "test": {
+        "type": "Identifier",
+        "name": "source1"
+      },
+      "consequent": {
+        "type": "ExpressionStatement",
+        "expression": {
+          "type": "AssignmentExpression",
+          "operator": "=",
+          "left": {
+            "type": "MemberExpression",
+            "computed": true,
+            "object": {
+              "type": "Identifier",
+              "name": "myFunc"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "source2"
+            }
+          },
+          "right": {
+            "type": "BinaryExpression",
+            "operator": "+",
+            "left": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+                "type": "Identifier",
+                "name": "myFunc"
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "x"
+              }
+            },
+            "right": {
+              "type": "Identifier",
+              "name": "source1"
+            }
+          }
+        }
+      },
+      "alternate": null
+    },
+    {
+      "type": "ExpressionStatement",
+      "expression": {
+        "type": "CallExpression",
+        "callee": {
+          "type": "Identifier",
+          "name": "sink"
+        },
+        "arguments": [
+          {
+            "type": "MemberExpression",
+            "computed": false,
+            "object": {
+              "type": "Identifier",
+              "name": "myFunc"
+            },
+            "property": {
+              "type": "Identifier",
+              "name": "x"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "sourceType": "module"
+}

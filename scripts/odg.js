@@ -1,4 +1,5 @@
 const esprima = require("esprima");
+const { writeFileSync } = require("fs");
 
 const res = esprima.parseModule(
   `function Func() {}; Func.prototype.x="ab"; myFunc = new Func;
