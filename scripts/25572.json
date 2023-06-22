@@ -47,6 +47,17 @@
           "type": "ImportSpecifier",
           "local": {
             "type": "Identifier",
+            "name": "useState"
+          },
+          "imported": {
+            "type": "Identifier",
+            "name": "useState"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "local": {
+            "type": "Identifier",
             "name": "memo"
           },
           "imported": {
@@ -96,177 +107,6 @@
       }
     },
     {
-      "type": "ImportDeclaration",
-      "specifiers": [
-        {
-          "type": "ImportSpecifier",
-          "local": {
-            "type": "Identifier",
-            "name": "useRecordContext"
-          },
-          "imported": {
-            "type": "Identifier",
-            "name": "useRecordContext"
-          }
-        }
-      ],
-      "source": {
-        "type": "Literal",
-        "value": "ra-core",
-        "raw": "\"ra-core\""
-      }
-    },
-    {
-      "type": "ExportNamedDeclaration",
-      "declaration": {
-        "type": "VariableDeclaration",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "RecordContext"
-            },
-            "init": {
-              "type": "CallExpression",
-              "callee": {
-                "type": "Identifier",
-                "name": "createContext"
-              },
-              "arguments": [
-                {
-                  "type": "Identifier",
-                  "name": "undefined"
-                }
-              ]
-            }
-          }
-        ],
-        "kind": "const"
-      },
-      "specifiers": [],
-      "source": null
-    },
-    {
-      "type": "ExportNamedDeclaration",
-      "declaration": {
-        "type": "VariableDeclaration",
-        "declarations": [
-          {
-            "type": "VariableDeclarator",
-            "id": {
-              "type": "Identifier",
-              "name": "RecordContextProvider"
-            },
-            "init": {
-              "type": "ArrowFunctionExpression",
-              "id": null,
-              "params": [
-                {
-                  "type": "ObjectPattern",
-                  "properties": [
-                    {
-                      "type": "Property",
-                      "key": {
-                        "type": "Identifier",
-                        "name": "children"
-                      },
-                      "computed": false,
-                      "value": {
-                        "type": "Identifier",
-                        "name": "children"
-                      },
-                      "kind": "init",
-                      "method": false,
-                      "shorthand": true
-                    },
-                    {
-                      "type": "Property",
-                      "key": {
-                        "type": "Identifier",
-                        "name": "value"
-                      },
-                      "computed": false,
-                      "value": {
-                        "type": "Identifier",
-                        "name": "value"
-                      },
-                      "kind": "init",
-                      "method": false,
-                      "shorthand": true
-                    }
-                  ]
-                }
-              ],
-              "body": {
-                "type": "JSXElement",
-                "openingElement": {
-                  "type": "JSXOpeningElement",
-                  "name": {
-                    "type": "JSXMemberExpression",
-                    "object": {
-                      "type": "JSXIdentifier",
-                      "name": "RecordContext"
-                    },
-                    "property": {
-                      "type": "JSXIdentifier",
-                      "name": "Provider"
-                    }
-                  },
-                  "selfClosing": false,
-                  "attributes": [
-                    {
-                      "type": "JSXAttribute",
-                      "name": {
-                        "type": "JSXIdentifier",
-                        "name": "value"
-                      },
-                      "value": {
-                        "type": "JSXExpressionContainer",
-                        "expression": {
-                          "type": "Identifier",
-                          "name": "value"
-                        }
-                      }
-                    }
-                  ]
-                },
-                "children": [
-                  {
-                    "type": "JSXExpressionContainer",
-                    "expression": {
-                      "type": "Identifier",
-                      "name": "children"
-                    }
-                  }
-                ],
-                "closingElement": {
-                  "type": "JSXClosingElement",
-                  "name": {
-                    "type": "JSXMemberExpression",
-                    "object": {
-                      "type": "JSXIdentifier",
-                      "name": "RecordContext"
-                    },
-                    "property": {
-                      "type": "JSXIdentifier",
-                      "name": "Provider"
-                    }
-                  }
-                }
-              },
-              "generator": false,
-              "expression": true,
-              "async": false
-            }
-          }
-        ],
-        "kind": "const"
-      },
-      "specifiers": [],
-      "source": null
-    },
-    {
       "type": "ExportNamedDeclaration",
       "declaration": {
         "type": "VariableDeclaration",
@@ -299,24 +139,17 @@
                           "name": "context"
                         },
                         "init": {
-                          "type": "BinaryExpression",
-                          "operator": ">",
-                          "left": {
-                            "type": "BinaryExpression",
-                            "operator": "<",
-                            "left": {
-                              "type": "Identifier",
-                              "name": "useContext"
-                            },
-                            "right": {
-                              "type": "Identifier",
-                              "name": "RecordType"
-                            }
-                          },
-                          "right": {
+                          "type": "CallExpression",
+                          "callee": {
                             "type": "Identifier",
-                            "name": "RecordContext"
-                          }
+                            "name": "useContext"
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "name": "RecordContext"
+                            }
+                          ]
                         }
                       }
                     ],
@@ -449,6 +282,37 @@
             "type": "VariableDeclarator",
             "id": {
               "type": "Identifier",
+              "name": "RecordContext"
+            },
+            "init": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "Identifier",
+                "name": "createContext"
+              },
+              "arguments": [
+                {
+                  "type": "Identifier",
+                  "name": "undefined"
+                }
+              ]
+            }
+          }
+        ],
+        "kind": "const"
+      },
+      "specifiers": [],
+      "source": null
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "declaration": {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
               "name": "RichTextField"
             },
             "init": {
@@ -551,6 +415,42 @@
                             "init": {
                               "type": "Identifier",
                               "name": "props"
+                            }
+                          }
+                        ],
+                        "kind": "const"
+                      },
+                      {
+                        "type": "VariableDeclaration",
+                        "declarations": [
+                          {
+                            "type": "VariableDeclarator",
+                            "id": {
+                              "type": "ArrayPattern",
+                              "elements": [
+                                {
+                                  "type": "Identifier",
+                                  "name": "text"
+                                },
+                                {
+                                  "type": "Identifier",
+                                  "name": "setText"
+                                }
+                              ]
+                            },
+                            "init": {
+                              "type": "CallExpression",
+                              "callee": {
+                                "type": "Identifier",
+                                "name": "useState"
+                              },
+                              "arguments": [
+                                {
+                                  "type": "Literal",
+                                  "value": "",
+                                  "raw": "\"\""
+                                }
+                              ]
                             }
                           }
                         ],
@@ -697,7 +597,7 @@
                                 },
                                 "consequent": {
                                   "type": "Identifier",
-                                  "name": "emptyText"
+                                  "name": "text"
                                 },
                                 "alternate": {
                                   "type": "ConditionalExpression",
