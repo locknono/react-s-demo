@@ -1,5 +1,5 @@
 import { MODE } from "@/constant";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import purify from "dompurify";
 import { ThemeContext } from "@/constant/context";
 
@@ -12,7 +12,6 @@ interface IProps {
  * @description render the content with respect to the rendering mode
  */
 export default function Panel(props: IProps) {
-  const theme = useContext(ThemeContext);
   /**
    * @description process the content. If the rendering mode is `html`, the content should be sanitized.
    */
@@ -34,7 +33,6 @@ export default function Panel(props: IProps) {
 
   return (
     <div>
-      <div>theme: {theme}</div>
       {props.mode === MODE.TEXT ? (
         <div>{html}</div>
       ) : (
