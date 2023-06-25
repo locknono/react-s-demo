@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { MODE } from "@/constant";
-import { ThemeContext } from "@/constant/context";
 import Panel from "@/components/panel";
 
 /**
@@ -36,11 +35,9 @@ export default function Demo() {
   };
 
   return (
-    <ThemeContext.Provider value="dark">
-      <div>
-        <button onClick={handleSwitchMode}>change Data</button>
-        <Panel {...data} />
-      </div>
-    </ThemeContext.Provider>
+    <div>
+      <button onClick={handleSwitchMode}>change Data</button>
+      <Panel {...data} />
+    </div>
   );
 }

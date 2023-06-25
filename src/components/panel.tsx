@@ -1,7 +1,6 @@
 import { MODE } from "@/constant";
 import React, { useEffect, useState } from "react";
 import purify from "dompurify";
-import { ThemeContext } from "@/constant/context";
 
 interface IProps {
   mode: number;
