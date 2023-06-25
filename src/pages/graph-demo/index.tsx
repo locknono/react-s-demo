@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useContext, createContext } from "react";
-import Panel from "@/components/panel";
+import { useState } from "react";
 import { MODE } from "@/constant";
 import { ThemeContext } from "@/constant/context";
+import Panel from "@/components/panel";
 
 /**
  * @description data rendered as html; Should be sanitized

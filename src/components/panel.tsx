@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import purify from "dompurify";
 import { ThemeContext } from "@/constant/context";
 
-interface IPanelProps {
+interface IProps {
   mode: number;
   content: string;
 }
@@ -11,7 +11,7 @@ interface IPanelProps {
 /**
  * @description render the content with respect to the rendering mode
  */
-export default function Panel(props: IPanelProps) {
+export default function Panel(props: IProps) {
   const theme = useContext(ThemeContext);
   /**
    * @description process the content. If the rendering mode is `html`, the content should be sanitized.
