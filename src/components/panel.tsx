@@ -24,6 +24,7 @@ export default function Panel(props: IProps) {
   };
 
   const processedContent = processContent(props.content);
+
   const [html, setHtml] = useState(processedContent);
 
   useEffect(() => {
