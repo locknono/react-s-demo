@@ -1,11 +1,9 @@
-import React from 'react';
+import { ThemeContext } from "@/constant/context";
+import React, { useContext } from "react";
 
 function UseContextDemo() {
-  return (
-    <div>
-      UseContextDemo
-    </div>
-  );
+  const record = useContext(ThemeContext);
+  return <div dangerouslySetInnerHTML={{ __html: record }}></div>;
 }
 
 export default UseContextDemo;

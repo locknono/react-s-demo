@@ -37,7 +37,7 @@ export default function Demo() {
   return (
     <div>
       <button onClick={handleSwitchMode}>change Data</button>
-      <Panel {...data} />
+      <Panel mode={data.mode} content={data.content} />
     </div>
   );
 }
