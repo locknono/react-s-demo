@@ -29,13 +29,8 @@ export default function UseCallbackDemo(props: any) {
 
   return (
     <div>
-      {userData && (
-        <>
-          <h2>{displayName}</h2>
-          <p>{userData.email}</p>
-          <button onClick={fetchUserData}>Refetch Data</button>
-        </>
-      )}
+      <p>{displayName}</p>
+      <button onClick={fetchUserData}>Refetch</button>
     </div>
   );
 }
