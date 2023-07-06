@@ -1,22 +1,41 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 
-function ChildComponent(props: any) {
-  return <button onClick={props.onClick}>Click me</button>;
-}
+// Mock request
+const request = (userId: string): any =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        data: { name: `User ${userId}`, email: `user${userId}@example.com` },
+      });
+    }, 2000);
+  });
 
-function UseCallbackDemo() {
-  const [count, setCount] = useState(0);
+export default function UseCallbackDemo(props: any) {
+  const { userId } = props;
+  const [userData, setUserData] = useState<any>(null);
 
-  const increment = useCallback(() => {
-    setCount((count) => count + 1);
-  }, []);
+  const fetchUserData = useCallback(async () => {
+    const response = await request(userId);
+    setUserData(response.data);
+  }, [userId]);
+
+  const displayName = useMemo(() => {
+    return userData?.name.toUpperCase();
+  }, [userData]);
+
+  useEffect(() => {
+    fetchUserData();
+  }, [fetchUserData]);
 
   return (
     <div>
-      <ChildComponent onClick={increment} />
-      <p>You clicked {count} times</p>
+      {userData && (
+        <>
+          <h2>{displayName}</h2>
+          <p>{userData.email}</p>
+          <button onClick={fetchUserData}>Refetch Data</button>
+        </>
+      )}
     </div>
   );
 }
-
-export default UseCallbackDemo;
