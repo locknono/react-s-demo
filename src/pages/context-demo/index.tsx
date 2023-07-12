@@ -3,7 +3,7 @@ import { ThemeContext } from "@/constant/context";
 import React from "react";
 
 function ContextDemo() {
-  const value = "dark";
+  const value = "dark2";
   return (
     <ThemeContext.Provider value={value}>
       <UseContextDemo />
